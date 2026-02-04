@@ -58,12 +58,14 @@ while running:
     player_rect.x = max(0, min(player_rect.x, WIDTH - player_width))
 
     # Drawing
-    screen.fill(WHITE)
+bg = pygame.image.load("Background.png").convert()      # use .convert_alpha() if image has transparency
+bg = pygame.transform.scale(bg, screen.get_size())      # optional: fit to screen
+
 
     # Draw floor
-    pygame.draw.rect(screen, GRAY, floor_rect)
+pygame.draw.rect(screen, GRAY, floor_rect)
 
-    pygame.display.flip()
+pygame.display.flip()
 
 pygame.quit()
 sys.exit()
