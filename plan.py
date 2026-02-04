@@ -39,3 +39,25 @@ if event.type == pygame.KEYDOWN:
     if event.key == pygame.K_RIGHT:
             player_rect.x 
             
+
+class FallingCoin:
+    def __init__(self, file, x, y, width, height):
+        self.file = file
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        self.image = pygame.transform.scale(pygame.image.load(self.file).convert_alpha(), (self.width, self.height))
+
+    def draw(self):
+        screen.blit(self.image, (self.x, self.y))
+
+falling_coin = FallingCoin ('Coin.jpg', 300, -100, 50, 100)
+
+run = True
+while run:
+
+clock.tick (60)
+falling_coin.y += 25
+if falling_coin.y > 600:
+    falling_coin
