@@ -58,6 +58,12 @@ run = True
 while run:
 
 clock.tick (60)
+
 falling_coin.y += 25
 if falling_coin.y > 600:
-    falling_coin
+    falling_coin.y = - 150
+    falling_coin.x = random.randint(0, 900)
+
+for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            run = False 
