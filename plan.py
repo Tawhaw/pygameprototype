@@ -29,6 +29,13 @@ screen.fill(BLACK)
 player_rect = pygame.Rect(WIDTH // 2, HEIGHT // 1, 30, 30)
 coin_circl = pygame.Rect(WIDTH // 2, HEIGHT // 5, 10, 10)
 
-if 
-    pygame.draw.rect(player_rect)
-
+pygame.draw.rect(player_rect)
+    
+if event.type == pygame.KEYDOWN:
+    
+    if event.key == pygame.K_LEFT:
+            player_rect.x 
+    
+    if event.key == pygame.K_RIGHT:
+            player_rect.x 
+            
